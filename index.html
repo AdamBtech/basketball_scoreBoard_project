@@ -1,16 +1,42 @@
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <div class="container">
-            <div>
-                <h3>HOME</h3>
-            </div>
-            <div>
-                <h3>GUEST</h3>
-            </div>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="scoreBoard">
+      <div class="containers">
+        <div class="containerHome">
+          <div>
+            <h3>HOME</h3>
+            <p id="ScorePlayer1">0</p>
+          </div>
+          <div class="buttons">
+            <button onclick="p1plusOne()">+1</button>
+            <button onclick="p1plusTwo()">+2</button>
+            <button onclick="p1plusThree()">+3</button>
+            <button onclick="p1minusTwo()">-2</button>
+          </div>
         </div>
-        <script src="index.js"></script>
-    </body>
+
+        <div class="containerGuest">
+          <div>
+            <h3>GUEST</h3>
+            <p id="ScorePlayer2">0</p>
+          </div>
+          <div class="buttons">
+            <button onclick="p2plusOne()">+1</button>
+            <button onclick="p2plusTwo()">+2</button>
+            <button onclick="p2plusThree()">+3</button>
+            <button onclick="p2minusTwo()">-2</button>
+          </div>
+        </div>
+      </div>
+      <button class="newgame" onclick="newGame()">New Game</button>
+    </div>
+  </body>
+  <script src="scoreBoard.js"></script>
 </html>
